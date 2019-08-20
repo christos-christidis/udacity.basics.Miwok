@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/tan_background"
-    android:orientation="horizontal">
+    android:background="@color/tan_background">
 
     <ImageView
         android:id="@+id/image"
@@ -17,6 +16,7 @@
         android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
+        android:layout_toEndOf="@+id/image"
         android:orientation="vertical"
         android:padding="16dp"
         tools:background="@color/category_numbers">
@@ -34,4 +34,13 @@
             android:gravity="top"
             tools:text="one" />
     </LinearLayout>
-</LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/play_button_size"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_play_arrow"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

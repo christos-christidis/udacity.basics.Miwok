@@ -47,7 +47,6 @@ class WordAdapter extends ArrayAdapter<Word> {
             defaultTextView.setText(word.getDefaultTranslation());
 
             View textContainer = listItemView.findViewById(R.id.text_container);
-            // SOS: note how we must first get the color the color-resId maps to!
             int color = ContextCompat.getColor(getContext(), mColorResourceId);
             textContainer.setBackgroundColor(color);
         }
